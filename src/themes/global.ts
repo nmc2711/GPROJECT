@@ -4,7 +4,11 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   ${reset};
-  
+
+  @font-face {
+    font-family: "gmarketSans";
+    src: url("/font/GmarketSansLight.otf");
+  }
   * {
     margin: 0;
     padding: 0;
@@ -20,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: "gmarketSans";
   }
 `
 
