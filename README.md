@@ -1,7 +1,3 @@
-## Next.js Pro Boilerplate
-
-The Next.js production boilerplate, all you need to start developing, without spend hours on configurations.
-
 ## Includes:
 
 - [Eslint](https://eslint.org/)
@@ -13,14 +9,3 @@ The Next.js production boilerplate, all you need to start developing, without sp
 - [Husky](https://github.com/typicode/husky)
 - [Jest](https://jestjs.io/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm install
-npm run dev
-```
-
-I hope it helps you!
