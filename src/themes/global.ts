@@ -7,7 +7,18 @@ const GlobalStyles = createGlobalStyle`
 
   @font-face {
     font-family: "gmarketSans";
+    font-weight: 300;
     src: url("/font/GmarketSansLight.otf");
+  }
+  @font-face {
+    font-family: "gmarketSans";
+    font-weight: 500;
+    src: url("/font/GmarketSansMedium.otf");
+  }
+  @font-face {
+    font-family: "gmarketSans";
+    font-weight: 700;
+    src: url("/font/GmarketSansBold.otf");
   }
   * {
     margin: 0;
