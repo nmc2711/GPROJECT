@@ -1,11 +1,41 @@
 import reset from 'styled-reset'
 
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
+
+interface Fonts {
+  fontName: string
+  weights: [number, string][]
+  src: string
+}
+
+const fonts: Fonts = {
+  fontName: 'GmarketSans',
+  weights: [
+    [300, 'Light'],
+    [500, 'Medium'],
+    [700, 'Bold']
+  ],
+  src: '/font/'
+}
+
+const fontFace = (font: Fonts) => {
+  return font.weights.map(([weight, weightStr]) => {
+    return css`
+      @font-face {
+        font-family: ${font.fontName};
+        font-weight: ${weight};
+        src: url('${font.src}${font.fontName}${weightStr}.ttf'),
+          url('${font.src}${font.fontName}${weightStr}.otf');
+      }
+    `
+  })
+}
 
 const GlobalStyles = createGlobalStyle`
   ${reset};
+  ${fontFace(fonts)};
 
-  @font-face {
+  /* @font-face {
     font-family: "gmarketSans";
     font-weight: 300;
     src: url("/font/GmarketSansLight.otf");
@@ -19,7 +49,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: "gmarketSans";
     font-weight: 700;
     src: url("/font/GmarketSansBold.otf");
-  }
+  } */
   * {
     margin: 0;
     padding: 0;
@@ -35,7 +65,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: "gmarketSans";
+    font-family: "GmarketSans";
   }
 `
 
