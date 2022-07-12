@@ -1,10 +1,9 @@
-import * as S from './styles'
 import { BasicButton, BorderButton, TextButton } from 'component/button'
+import Layout from 'component/layout'
 
 export default function Detail() {
   return (
-    <div>
-      <h1>Detail</h1>
+    <Layout paddingTop={100} paddingBottom={100}>
       <BasicButton contentWitdh="240px">구매하기</BasicButton>
       <BorderButton contentWitdh="240px" borderColor="blue" size="xl">
         저장하기
@@ -12,6 +11,6 @@ export default function Detail() {
       <TextButton contentWitdh="240px" themes="green" size="xl">
         판매하기
       </TextButton>
-    </div>
+    </Layout>
   )
 }
