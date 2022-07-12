@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 import { getSize } from '../helper'
 
-function getBorderColor(themes: string) {
-  switch (themes) {
+function getBorderColor(borderColor: string) {
+  switch (borderColor) {
     case 'black':
       return css`
         background-color: #fff;

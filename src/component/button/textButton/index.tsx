@@ -2,32 +2,26 @@ import { forwardRef, ButtonHTMLAttributes, ReactNode } from 'react'
 
 import { BtnWrap } from './styles'
 
-type BtnTheme = 'green' | 'white' | 'blue'
+type BtnTheme = 'green' | 'blue' | 'black'
 
-interface BasicButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface TextButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   contentWitdh?: string
+  children: ReactNode
   size?: 's' | 'm' | 'l' | 'xl' | 'xxl'
   themes?: BtnTheme
-  children: ReactNode
 }
 
-const BasicButton = forwardRef<HTMLButtonElement, BasicButtonProps>(
+const TextButton = forwardRef<HTMLButtonElement, TextButtonProps>(
   (
-    {
-      contentWitdh = '100%',
-      themes = 'green',
-      size = 'xl',
-      children,
-      ...props
-    },
+    { contentWitdh = '100%', size = 'm', themes = 'green', children, ...props },
     ref
   ) => {
     return (
       <BtnWrap
         ref={ref}
         contentWitdh={contentWitdh}
-        themes={themes}
         size={size}
+        themes={themes}
         {...props}
       >
         {children}
@@ -36,4 +30,4 @@ const BasicButton = forwardRef<HTMLButtonElement, BasicButtonProps>(
   }
 )
 
-export default BasicButton
+export default TextButton
