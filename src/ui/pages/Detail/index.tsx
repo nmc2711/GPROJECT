@@ -5,7 +5,7 @@ export default function Detail() {
   return (
     <div>
       <h1>Detail</h1>
-      <BasicButton>안녕</BasicButton>
+      <BasicButton contentWitdh="240px">구매하기</BasicButton>
     </div>
   )
 }

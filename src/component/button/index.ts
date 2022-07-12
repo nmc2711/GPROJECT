@@ -1,3 +1,3 @@
-import BasicButton from './basic'
+import BasicButton from './basicButton'
 
 export { BasicButton }

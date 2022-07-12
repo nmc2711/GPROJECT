@@ -53,6 +53,16 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: "GmarketSans";
   }
+
+  button {
+    padding: 0; 
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    border-radius: 0; 
+    overflow: visible;
+    cursor: pointer;
+  }
 `
 
 /**
