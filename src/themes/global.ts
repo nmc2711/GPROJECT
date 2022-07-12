@@ -33,23 +33,9 @@ const fontFace = (font: Fonts) => {
 
 const GlobalStyles = createGlobalStyle`
   ${reset};
+
   ${fontFace(fonts)};
 
-  /* @font-face {
-    font-family: "gmarketSans";
-    font-weight: 300;
-    src: url("/font/GmarketSansLight.otf");
-  }
-  @font-face {
-    font-family: "gmarketSans";
-    font-weight: 500;
-    src: url("/font/GmarketSansMedium.otf");
-  }
-  @font-face {
-    font-family: "gmarketSans";
-    font-weight: 700;
-    src: url("/font/GmarketSansBold.otf");
-  } */
   * {
     margin: 0;
     padding: 0;
@@ -68,5 +54,9 @@ const GlobalStyles = createGlobalStyle`
     font-family: "GmarketSans";
   }
 `
+
+/**
+ * @explain : ttf는 2차원 베지어 방식, otf는 3차원 베지어 방식 표현속도는 ttf가 높지만 3차원 곡선인 otf가 깔끔한 해상도 제공. 이외 다른 타입들은 압축정도의 차이
+ */
 
 export default GlobalStyles
