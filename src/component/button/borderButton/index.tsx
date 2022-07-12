@@ -4,7 +4,7 @@ import { BtnWrap } from './styles'
 interface BorderButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   contentWitdh?: string
   size?: 's' | 'm' | 'l' | 'xl' | 'xxl'
-  borderColor?: string
+  borderColor?: 'green' | 'blue' | 'black' | 'gray'
   children: ReactNode
 }
 
