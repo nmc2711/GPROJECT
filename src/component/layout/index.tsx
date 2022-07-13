@@ -1,6 +1,8 @@
 import { ReactNode } from 'react'
 
-import { LayoutWrapper } from './styles'
+import Header from 'component/header'
+
+import { Layout, Contents } from './styles'
 
 type LayoutTypes = 'basic' | 'headLess' | 'footerLess'
 
@@ -11,18 +13,20 @@ type LayoutProps = {
   children: ReactNode
 }
 
-const Layout = ({
+const LayoutComponent = ({
   layoutType = 'basic',
   paddingTop,
   paddingBottom,
   children
 }: LayoutProps) => {
   return (
-    <LayoutWrapper paddingTop={paddingTop} paddingBottom={paddingBottom}>
-      {layoutType !== 'headLess' && <header>헤더입니다.</header>}
-      {children}
-      {layoutType !== 'footerLess' && <footer>푸터입니다.</footer>}
-    </LayoutWrapper>
+    <Layout>
+      {layoutType !== 'headLess' && <Header />}
+      <Contents paddingTop={paddingTop} paddingBottom={paddingBottom}>
+        {children}
+      </Contents>
+      {layoutType !== 'footerLess' && <div>푸터입니다.</div>}
+    </Layout>
   )
 }
-export default Layout
+export default LayoutComponent

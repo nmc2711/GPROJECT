@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const LayoutWrapper = styled.main<{
+export const Layout = styled.main`
+  height: 100%;
+`
+
+export const Contents = styled.div<{
   paddingBottom?: number
   paddingTop?: number
 }>`
