@@ -1,8 +1,10 @@
-const Header = () => {
+import { Header } from './styles'
+
+const HeaderComponent = () => {
   return (
-    <header>
+    <Header>
       <h1>Header</h1>
-    </header>
+    </Header>
   )
 }
-export default Header
+export default HeaderComponent
