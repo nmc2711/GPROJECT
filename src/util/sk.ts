@@ -10,3 +10,4 @@ function makeObject<P>(obj: AnyObject): Partial<P> {
     return temp;
   }
   
+  
