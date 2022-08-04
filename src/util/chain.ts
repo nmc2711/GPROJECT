@@ -8,18 +8,6 @@ export function splitChain<P>(key: string, value: any, temp: any): any {
       temp[name] = value;
       
   
-    } else {
-      objChain.shift();
-  
-      let test = {};
-      if (temp[name]) {
-        test = temp[name];
-      }
-      
-      temp[name] = {
-        ...temp[name],
-        ...splitChain(objChain.join('.'), value, test),
-      };
     }
   
     return temp;
